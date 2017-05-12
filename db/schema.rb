@@ -16,10 +16,12 @@ ActiveRecord::Schema.define(version: 20170310161315) do
     t.integer  "rating"
     t.integer  "guest_id"
     t.integer  "episode_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["episode_id"], name: "index_appearances_on_episode_id"
     t.index ["guest_id"], name: "index_appearances_on_guest_id"
+    t.index ["user_id"], name: "index_appearances_on_user_id"
   end
 
   create_table "episodes", force: :cascade do |t|
@@ -28,7 +30,6 @@ ActiveRecord::Schema.define(version: 20170310161315) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 
   create_table "guests", force: :cascade do |t|
     t.string   "name"

@@ -1,0 +1,8 @@
+<h1>Appearance</h1>
+
+<%= "Rating: #{@appearance.rating}, Date: #{@appearance.episode.date}, Guest: #{@appearance.guest.name}" %>
+
+<p>
+  <%= link_to "Edit this appearance", edit_appearance_path %><br/>
+  <%= link_to "Back to all appearances", appearances_path %>
+</p>
